@@ -1,17 +1,37 @@
 
 
-puts "You are Dorothy. Dorothy is mad at Mrs. Gulch for kicking her dog. Do you choose #1 - to put on your big girl shoes and talk it out, or #2 - to run away and steal the family dog?"
+# Next step (Feb 17th) create a class around the questions/options strings
 
-print "> "
-stayORgo = $stdin.gets.chomp
+def prompt
+  puts "\n"
+  print "> "
+  choice = $stdin.gets.chomp
+  puts "\n"
+
+  choice
+end
+
+def ask_question(question, options)
+  puts "\n\n"
+  puts question
+  puts "\n"
+  options.each_with_index do |option, i|
+    puts "#{i+1}. #{option}"
+  end
+  prompt
+end
+
+
+stayORgo = ask_question "You are Dorothy. Dorothy is mad at Mrs. Gulch for kicking her dog. What do you choose?", [
+  "Put on your big girl shoes and talk it out.",
+  "Run away and steal the family dog."
+]
 
 if stayORgo == "1"
-  puts "You're upset, yes. How do you handle this? Do you:"
-  puts "1. Angrily confront Mrs. Gulch"
-  puts "2. Talk to Auntie Em - she's very sensible and will have good advice. "
-
-  print "> "
-  emORgulch = $stdin.gets.chomp
+  emORgulch = ask_question "You're upset, yes. How do you handle this? Do you:", [
+  "Angrily confront Mrs. Gulch",
+  "Talk to Auntie Em - she's very sensible and will have good advice."
+  ]
 
   if emORgulch == "1"
     puts "She's a witch. She eats your dog, and makes you live in the monkey pit. Good job!"
@@ -22,13 +42,11 @@ if stayORgo == "1"
   end
 
 elsif stayORgo == "2"
-  puts "You steal the dog. Down the road you run into a homeless nomad who claims to be magic. Do you:"
-  puts "1. Turn around and go home."
-  puts "2. Take the candy he is offering and continue running away."
-  puts "3. Shack up with him."
-
-  print "> "
-  nomad = $stdin.gets.chomp
+  nomad = ask_question "You steal the dog. Down the road you run into a homeless nomad who claims to be magic. Do you:", [
+  "Turn around and go home.",
+  "Take the candy he is offering and continue running away.",
+  "Shack up with him."
+  ]
 
   if nomad == "1" || nomad == "2"
     puts "While you're travelling, you are struck by a rogue wagon wheel and die a slow painful death. Good job!"
