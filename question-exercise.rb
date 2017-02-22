@@ -30,6 +30,10 @@ fifth_question = Question.new("If you could be an animal, what would you be?")
 fifth_question.ask
 animal = fifth_question.prompt
 
+sixth_question = Question.new("List 3 of your best personality traits.")
+sixth_question.ask
+best = sixth_question.prompt
+
 puts """
 Hey #{name}, thanks for answering my questions.
 When it comes to being a morning or a night person, you chose #{time}.
@@ -37,6 +41,7 @@ Good to know.
 You prefer #{foods} foods. I can relate. Meee tooo.
 It's a good thing you chose #{ninjas}.
 If you could be an animal, you would be a #{animal}.
+Three of your best personality traits are that you are: #{best}
 """
 
 exit
