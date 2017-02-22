@@ -14,13 +14,13 @@ name = Question.new(
 "What's your name?"
 )
 name.ask
-name.prompt
+name = name.prompt
 
 time = Question.new(
 "Are you a morning or a night person?"
 )
 time.ask
-time.prompt
+time = time.prompt
 
 puts """
 Hey #{name}, thanks for answering my questions.
