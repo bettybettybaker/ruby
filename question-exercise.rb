@@ -10,15 +10,11 @@ class Question
   end
 end
 
-name = Question.new(
-"What's your name?"
-)
+name = Question.new("What's your name?")
 name.ask
 name.prompt
 
-time = Question.new(
-"Are you a morning or a night person?"
-)
+time = Question.new("Are you a morning or a night person?")
 time.ask
 time.prompt
 
