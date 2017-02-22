@@ -1,3 +1,36 @@
+class Question
+  def initialize (question)
+    @question = question
+  end
+  def ask
+    puts @question
+  end
+  def prompt
+    gets.chomp
+  end
+end
+
+name = Question.new(
+"What's your name?"
+)
+name.ask
+name.prompt
+
+time = Question.new(
+"Are you a morning or a night person?"
+)
+time.ask
+time.prompt
+
+puts """
+Hey #{name}, thanks for answering my questions.
+When it comes to being a morning or a night person, you chose #{time}.
+Good to know.
+"""
+
+exit
+
+=begin
 def prompt
   print "\n \n >> "
   gets.chomp
