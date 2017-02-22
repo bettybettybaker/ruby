@@ -34,6 +34,10 @@ sixth_question = Question.new("List 3 of your best personality traits.")
 sixth_question.ask
 best = sixth_question.prompt
 
+seventh_question = Question.new("If you HAD to change your name, what would you change it to?")
+seventh_question.ask
+change = seventh_question.prompt
+
 puts """
 Hey #{name}, thanks for answering my questions.
 When it comes to being a morning or a night person, you chose #{time}.
@@ -41,7 +45,8 @@ Good to know.
 You prefer #{foods} foods. I can relate. Meee tooo.
 It's a good thing you chose #{ninjas}.
 If you could be an animal, you would be a #{animal}.
-Three of your best personality traits are that you are: #{best}
+Three of your best personality traits are that you are: #{best}.
+If you HAD to change your name, you would be called #{change}.
 """
 
 exit
