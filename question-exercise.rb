@@ -23,9 +23,8 @@ third_question.ask
 foods = third_question.prompt
 
 fourth_question = Question.new("Ninjas or Pirates?")
-third_question.ask
-ninjas = third_question.prompt
-
+fourth_question.ask
+ninjas = fourth_question.prompt
 
 puts """
 Hey #{name}, thanks for answering my questions.
