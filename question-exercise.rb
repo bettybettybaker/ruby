@@ -10,13 +10,14 @@ class Question
   end
 end
 
-name = Question.new("What's your name?")
-name.ask
-name = name.prompt
+first_question = Question.new("What's your name?")
+first_question.ask
+name = first_question.prompt
 
-time = Question.new("Are you a morning or a night person?")
-time.ask
-time = time.prompt
+second_question = Question.new("Are you a morning or a night person?")
+second_question.ask
+time = second_question.prompt
+
 
 puts """
 Hey #{name}, thanks for answering my questions.
@@ -82,3 +83,4 @@ So the doggos? You a fan of the doggos? You said #{doggos}.
 When it comes to languages, I speak one. You speak #{languages}.
 Thank goodness we both speak at least one in common!
 """
+=end
