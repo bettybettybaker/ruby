@@ -18,11 +18,16 @@ second_question = Question.new("Are you a morning or a night person?")
 second_question.ask
 time = second_question.prompt
 
+third_question = Question.new("Do you prefer sweet or salty foods?")
+third_question.ask
+foods = third_question.prompt
+
 
 puts """
 Hey #{name}, thanks for answering my questions.
 When it comes to being a morning or a night person, you chose #{time}.
 Good to know.
+You prefer #{foods} foods. I can relate. Meee tooo.
 """
 
 exit
