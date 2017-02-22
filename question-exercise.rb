@@ -42,6 +42,7 @@ eighth_question = Question.new("What is your favorite movie?")
 eighth_question.ask
 movie = eighth_question.prompt
 
+
 puts """
 Hey #{name}, thanks for answering my questions.
 When it comes to being a morning or a night person, you chose #{time}.
@@ -52,6 +53,7 @@ If you could be an animal, you would be a #{animal}.
 Three of your best personality traits are that you are: #{best}.
 If you HAD to change your name, you would be called #{change}.
 Your favorite movie, dear #{change}, is apparently #{movie}.
+I can see why. Cool flick.
 """
 
 exit
