@@ -17,13 +17,14 @@ class Question
 end
 
 def questions
-  #question instance here?
+  # YOCK'S HINT: question instance here?
   {
     name: "What's your name?",
     tod: "Are you a morning or a night person?",
     foods: "Do you prefer sweet or salty foods?",
     ninjas: "Ninjas or Pirates?",
-    animal: "If you could be an animal, what would you be?"
+    animal: "If you could be an animal, what would you be?",
+    best: "List 3 of your best personality traits."
   }
 end
 
@@ -86,6 +87,7 @@ Good to know.
 You prefer #{answers[:foods]} foods. I can relate. Meee tooo.
 It's a good thing you chose #{answers[:ninjas]} (anything else is just wrong).
 If you could be an animal, you would be a #{answers[:animal]}.
+Three of your best personality traits are that you are: #{answers[:best]}.
 """
 =begin
 You prefer #{foods} foods. I can relate. Meee tooo.
