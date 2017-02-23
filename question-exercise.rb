@@ -24,7 +24,8 @@ def questions
     foods: "Do you prefer sweet or salty foods?",
     ninjas: "Ninjas or Pirates?",
     animal: "If you could be an animal, what would you be?",
-    best: "What are three of your best personality traits?"
+    best: "What are three of your best personality traits?",
+    change: "If you HAD to change your name, what would you change it to?"
   }
 end
 
@@ -88,6 +89,7 @@ You prefer #{answers[:foods]} foods. I can relate. Meee tooo.
 It's a good thing you chose #{answers[:ninjas]} (anything else is just wrong).
 If you could be an animal, you would be a #{answers[:animal]}.
 Three of your best personality traits are that you are: #{answers[:best]}.
+If you HAD to change your name, you would be called #{answers[:change]}.
 """
 =begin
 You prefer #{foods} foods. I can relate. Meee tooo.
