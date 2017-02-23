@@ -25,7 +25,8 @@ def questions
     ninjas: "Ninjas or Pirates?",
     animal: "If you could be an animal, what would you be?",
     best: "What are three of your best personality traits?",
-    change: "If you HAD to change your name, what would you change it to?"
+    change: "If you HAD to change your name, what would you change it to?",
+    movie: "What is your favorite movie?"
   }
 end
 
@@ -90,6 +91,8 @@ It's a good thing you chose #{answers[:ninjas]} (anything else is just wrong).
 If you could be an animal, you would be a #{answers[:animal]}.
 Three of your best personality traits are that you are: #{answers[:best]}.
 If you HAD to change your name, you would be called #{answers[:change]}.
+Your favorite movie, dear #{answers[:change]}, is apparently #{answers[:movie]}.
+I can see why. Cool flick.
 """
 =begin
 You prefer #{foods} foods. I can relate. Meee tooo.
