@@ -27,7 +27,8 @@ def questions
     best: "What are three of your best personality traits?",
     change: "If you HAD to change your name, what would you change it to?",
     movie: "What is your favorite movie?",
-    doggos: "Are you a dog person?"
+    doggos: "Are you a dog person?",
+    languages: "How many languages do you speak? (Klingon counts)"
   }
 end
 
@@ -95,6 +96,8 @@ If you HAD to change your name, you would be called #{answers[:change]}.
 Your favorite movie, dear #{answers[:change]}, is apparently #{answers[:movie]}.
 I can see why. Cool flick.
 So the doggos? You a fan of the doggos? You said #{answers[:doggos]}.
+When it comes to languages, I speak one. You speak #{answers[:languages]}.
+Thank goodness we both speak at least one in common!
 """
 =begin
 You prefer #{foods} foods. I can relate. Meee tooo.
