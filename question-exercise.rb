@@ -46,6 +46,10 @@ ninth_question = Question.new("Are you a dog person?")
 ninth_question.ask
 doggos = ninth_question.prompt
 
+tenth_question = Question.new("How many languages do you speak? (Klingon counts)")
+tenth_question.ask
+languages = tenth_question.prompt
+
 
 puts """
 Hey #{name}, thanks for answering my questions.
@@ -59,6 +63,8 @@ If you HAD to change your name, you would be called #{change}.
 Your favorite movie, dear #{change}, is apparently #{movie}.
 I can see why. Cool flick.
 So the doggos? You a fan of the doggos? You said #{doggos}.
+When it comes to languages, I speak one. You speak #{languages}.
+Thank goodness we both speak at least one in common!
 """
 
 exit
