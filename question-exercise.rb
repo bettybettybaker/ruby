@@ -1,3 +1,9 @@
+# Continue this pattern for the whole
+# See if I can figure out a way to have the question class use the labels and
+# collect the answers so that the label and the answer is stored in the instance
+# modify narrative
+# try to get rid of answers hash
+
 class Question
   def initialize (question)
     @question = question
@@ -10,6 +16,24 @@ class Question
   end
 end
 
+def questions
+  #question instance here?
+  {
+    name: "What's your name?",
+    tod: "Are you a morning or a night person?"
+  }
+end
+
+
+answers = {}
+
+questions.each do |label, question|
+  current_question = Question.new question
+  current_question.ask
+  answers[label] = current_question.prompt
+end
+
+=begin
 first_question = Question.new("What's your name?")
 first_question.ask
 name = first_question.prompt
@@ -50,11 +74,14 @@ tenth_question = Question.new("How many languages do you speak? (Klingon counts)
 tenth_question.ask
 languages = tenth_question.prompt
 
+=end
 
 puts """
-Hey #{name}, thanks for answering my questions.
-When it comes to being a morning or a night person, you chose #{time}.
+Hey #{answers[:name]}, thanks for answering my questions.
+When it comes to being a morning or a night person, you chose #{answers[:tod]}.
 Good to know.
+"""
+=begin
 You prefer #{foods} foods. I can relate. Meee tooo.
 It's a good thing you chose #{ninjas}.
 If you could be an animal, you would be a #{animal}.
@@ -66,3 +93,4 @@ So the doggos? You a fan of the doggos? You said #{doggos}.
 When it comes to languages, I speak one. You speak #{languages}.
 Thank goodness we both speak at least one in common!
 """
+=end
