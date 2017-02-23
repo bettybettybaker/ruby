@@ -22,7 +22,8 @@ def questions
     name: "What's your name?",
     tod: "Are you a morning or a night person?",
     foods: "Do you prefer sweet or salty foods?",
-    ninjas: "Ninjas or Pirates?"
+    ninjas: "Ninjas or Pirates?",
+    animal: "If you could be an animal, what would you be?"
   }
 end
 
@@ -84,6 +85,7 @@ When it comes to being a morning or a night person, you chose #{answers[:tod]}.
 Good to know.
 You prefer #{answers[:foods]} foods. I can relate. Meee tooo.
 It's a good thing you chose #{answers[:ninjas]} (anything else is just wrong).
+If you could be an animal, you would be a #{answers[:animal]}.
 """
 =begin
 You prefer #{foods} foods. I can relate. Meee tooo.
