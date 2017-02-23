@@ -24,7 +24,7 @@ def questions
     foods: "Do you prefer sweet or salty foods?",
     ninjas: "Ninjas or Pirates?",
     animal: "If you could be an animal, what would you be?",
-    best: "List 3 of your best personality traits."
+    best: "What are three of your best personality traits?"
   }
 end
 
