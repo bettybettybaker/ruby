@@ -20,7 +20,8 @@ def questions
   #question instance here?
   {
     name: "What's your name?",
-    tod: "Are you a morning or a night person?"
+    tod: "Are you a morning or a night person?",
+    foods: "Do you prefer sweet or salty foods?"
   }
 end
 
@@ -80,6 +81,7 @@ puts """
 Hey #{answers[:name]}, thanks for answering my questions.
 When it comes to being a morning or a night person, you chose #{answers[:tod]}.
 Good to know.
+You prefer #{answers[:foods]} foods. I can relate. Meee tooo.
 """
 =begin
 You prefer #{foods} foods. I can relate. Meee tooo.
