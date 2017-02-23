@@ -42,6 +42,10 @@ eighth_question = Question.new("What is your favorite movie?")
 eighth_question.ask
 movie = eighth_question.prompt
 
+ninth_question = Question.new("Are you a dog person?")
+ninth_question.ask
+doggos = ninth_question.prompt
+
 
 puts """
 Hey #{name}, thanks for answering my questions.
@@ -54,6 +58,7 @@ Three of your best personality traits are that you are: #{best}.
 If you HAD to change your name, you would be called #{change}.
 Your favorite movie, dear #{change}, is apparently #{movie}.
 I can see why. Cool flick.
+So the doggos? You a fan of the doggos? You said #{doggos}.
 """
 
 exit
