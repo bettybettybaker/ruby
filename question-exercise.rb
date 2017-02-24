@@ -5,21 +5,22 @@
 # try to get rid of answers hash
 
 class Question
-  def initialize (question)
-    @question = question
+  attr_accessor :answer           # attr_accessor returns a string, and assigns it to the label :answer
+  def initialize (question)       # class initializer method with the argument question
+    @question = question          # creates an instance of question and points to the method argument
   end
-  def ask
-    puts @question
-  end
-  def prompt
-    gets.chomp
+  def ask                         # when called this method with take the instance of question that we
+    puts @question                # created and put it on the screen - need to research significance of
+  end                             # question vs questions in this code (are they related and talking to each other?)
+  def prompt                      # when called this method will prompt for input from the user, which is stored
+    gets.chomp                    # in gets.chomp
   end
 end
 
-def questions
-  # YOCK'S HINT: question instance here?
+def questions                     # when called this will give access to the hash of labels and questions
+                                  # YOCK'S HINT: question instance here?
   {
-    name: "What's your name?",
+    name: Question.new "What's your name?",
     tod: "Are you a morning or a night person?",
     foods: "Do you prefer sweet or salty foods?",
     ninjas: "Ninjas or Pirates?",
@@ -33,16 +34,15 @@ def questions
 end
 
 
-answers = {}
+answers = {}   # try to get rid of this
 
-questions.each do |label, question|
-  current_question = Question.new question
-  current_question.ask
-  answers[label] = current_question.prompt
+questions.each do |label, question|         # for each question, do label and question (does this label tag know that it is talking to the blue labels?)
+  current_question.ask                      # calls the ask method in the Question class
+  current_question.answer = current_question.prompt   #says that the answer is the same as the input received from the user
 end
 
 puts """
-Hey #{answers[:name]}, thanks for answering my questions.
+Hey #{questions[:name].answer}, thanks for answering my questions.
 When it comes to being a morning or a night person, you chose #{answers[:tod]}.
 Good to know.
 You prefer #{answers[:foods]} foods. I can relate. Meee tooo.
