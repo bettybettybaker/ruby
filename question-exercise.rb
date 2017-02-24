@@ -7,9 +7,9 @@
 class Question
   attr_accessor :answer           # attr_accessor returns a string, and assigns it to the label :answer
   def initialize (question)       # class initializer method with the argument question
-    @question = question          # creates an instance of question and points to the method argument
+    @question = question          # creates an instance of @question and points to the method argument - (instance variable)
   end
-  def ask                         # when called this method with take the instance of question that we
+  def ask                         # when called this method with take the instance of @question that we
     puts @question                # created and put it on the screen - need to research significance of
   end                             # question vs questions in this code (are they related and talking to each other?)
   def prompt                      # when called this method will prompt for input from the user, which is stored
@@ -18,7 +18,7 @@ class Question
 end
 
 def questions                     # when called this will give access to the hash of labels and questions
-                                  # YOCK'S HINT: question instance here?
+                                  # YOCK'S HINT: question instance here? (demo in :name)
   {
     name: Question.new "What's your name?",
     tod: "Are you a morning or a night person?",
