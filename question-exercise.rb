@@ -5,7 +5,6 @@
 # try to get rid of answers hash
 
 class Question
-  attr_accessor :answer
   def initialize (question)
     @question = question
   end
@@ -18,9 +17,9 @@ class Question
 end
 
 def questions
-                                  # YOCK'S HINT: question instance here? (demo in :name)
+  # YOCK'S HINT: question instance here?
   {
-    name: Question.new "What's your name?",
+    name: "What's your name?",
     tod: "Are you a morning or a night person?",
     foods: "Do you prefer sweet or salty foods?",
     ninjas: "Ninjas or Pirates?",
@@ -34,15 +33,16 @@ def questions
 end
 
 
-answers = {}   # try to get rid of this
+answers = {}
 
 questions.each do |label, question|
-  question.ask
-  question.answer = question.prompt  
+  current_question = Question.new question
+  current_question.ask
+  answers[label] = current_question.prompt
 end
 
 puts """
-Hey #{questions[:name].answer}, thanks for answering my questions.
+Hey #{answers[:name]}, thanks for answering my questions.
 When it comes to being a morning or a night person, you chose #{answers[:tod]}.
 Good to know.
 You prefer #{answers[:foods]} foods. I can relate. Meee tooo.
