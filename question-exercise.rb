@@ -5,19 +5,19 @@
 # try to get rid of answers hash
 
 class Question
-  attr_accessor :answer           # attr_accessor returns a string, and assigns it to the label :answer
-  def initialize (question)       # class initializer method with the argument question
-    @question = question          # creates an instance of @question and points to the method argument - (instance variable)
+  attr_accessor :answer
+  def initialize (question)
+    @question = question
   end
-  def ask                         # when called this method with take the instance of @question that we
-    puts @question                # created and put it on the screen - need to research significance of
-  end                             # question vs questions in this code (are they related and talking to each other?)
-  def prompt                      # when called this method will prompt for input from the user, which is stored
-    gets.chomp                    # in gets.chomp
+  def ask
+    puts @question
+  end
+  def prompt
+    gets.chomp
   end
 end
 
-def questions                     # when called this will give access to the hash of labels and questions
+def questions
                                   # YOCK'S HINT: question instance here? (demo in :name)
   {
     name: Question.new "What's your name?",
@@ -36,9 +36,9 @@ end
 
 answers = {}   # try to get rid of this
 
-questions.each do |label, question|         # for each question, do label and question (does this label tag know that it is talking to the blue labels?)
-  question.ask                      # calls the ask method in the Question class
-  question.answer = question.prompt   #says that the answer is the same as the input received from the user
+questions.each do |label, question|
+  question.ask
+  question.answer = question.prompt  
 end
 
 puts """
