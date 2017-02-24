@@ -35,10 +35,9 @@ end
 
 answers = {}
 
-questions.each do |label, question|
-  current_question = Question.new question
-  current_question.ask
-  answers[label] = current_question.prompt
+questions.each do |question|
+  question.ask
+  question.answer = question.prompt
 end
 
 puts """
