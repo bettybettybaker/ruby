@@ -37,8 +37,8 @@ end
 answers = {}   # try to get rid of this
 
 questions.each do |label, question|         # for each question, do label and question (does this label tag know that it is talking to the blue labels?)
-  current_question.ask                      # calls the ask method in the Question class
-  current_question.answer = current_question.prompt   #says that the answer is the same as the input received from the user
+  question.ask                      # calls the ask method in the Question class
+  question.answer = question.prompt   #says that the answer is the same as the input received from the user
 end
 
 puts """
