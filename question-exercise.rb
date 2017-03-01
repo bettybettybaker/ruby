@@ -38,7 +38,7 @@ answers = {}   # try to get rid of this
 
 questions.each do |label, question|
   question.ask
-  question.answer = question.prompt  
+  question.answer = question.prompt
 end
 
 puts """
