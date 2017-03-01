@@ -20,7 +20,9 @@ end
 def questions
                                   # YOCK'S HINT: question instance here? (demo in :name)
   {
-    name: Question.new "What's your name?"
+    name: Question.new("What's your name?")
+  }
+end
   #  tod: "Are you a morning or a night person?",
   #  foods: "Do you prefer sweet or salty foods?",
   #  ninjas: "Ninjas or Pirates?",
@@ -30,13 +32,13 @@ def questions
   #  movie: "What is your favorite movie?",
   #  doggos: "Are you a dog person?",
   #  languages: "How many languages do you speak? (Klingon counts)"
-  }
-end
+#  }
+#end
 
 
 questions.each do |question|
-  question.ask
-  question.prompt
+  Question.ask
+  Question.prompt
 end
 
 puts """
