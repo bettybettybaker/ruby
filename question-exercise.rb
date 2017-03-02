@@ -18,11 +18,9 @@ class Question
 end
 
 
-def questions                                # YOCK'S HINT: question instance here? (demo in :name)
-  {
-    name: Question.new("What's your name?")
-  }
-end
+questions = {
+  name: Question.new("What's your name?")
+}
 
 
 
