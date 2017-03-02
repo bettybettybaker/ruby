@@ -12,14 +12,13 @@ class Question
   def ask
     puts @question
   end
-   def answer
-     gets.chomp
+   def prompt
+     self.answer = gets.chomp
    end
 end
 
 
-def questions
-                                  # YOCK'S HINT: question instance here? (demo in :name)
+def questions                                # YOCK'S HINT: question instance here? (demo in :name)
   {
     name: Question.new("What's your name?")
   }
@@ -27,9 +26,9 @@ end
 
 
 
-questions.each do |question|
+questions.each do |label, question|
   question.ask
-  question.answer
+  question.prompt
 end
 
 puts """
